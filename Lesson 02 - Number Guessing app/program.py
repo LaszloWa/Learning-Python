@@ -8,6 +8,7 @@ print()
 
 # This generates the random number the user will try and guess
 the_number = random.randint(0, 100)
+name = input("Hello. What's your name? ")
 
 # Here we define guess, which will be the user's guess.
 # Here it is defined a 'dummy', it will be filled in the while-loop below.
@@ -25,4 +26,4 @@ while guess != the_number:
     elif guess > the_number:
         print("The entered number is too HIGH, please try again.")
     else:
-        print("Congratulations, you won! The number was {}".format(the_number))
+        print("Congratulations {}, you won! The number was {}.".format(name, the_number))
