@@ -22,8 +22,32 @@ def print_header():
 def get_user_bday():
     print("When is your birthday?")
     year = int(input("Enter year [YYYY]: "))
+    if len(str(year)) > 4:
+        print("Sorry, that seems to be the distant future")
+        year = int(input("Enter year [YYYY]: "))
+    elif len(str(year)) < 4:
+        print("Oh my, are you sure you are that old??")
+        year = int(input("Enter year [YYYY]: "))
+    else:
+        pass
     month = int(input("Enter month [MM]: "))
+    if month <= 0:
+        print("Sorry, {} is not a month known to me. Please select a value between 1 and 12.".format(month))
+        month = int(input("Enter month [MM]: "))
+    elif month > 12:
+        print("Sorry, there is no {}. month of the year. Please select a value between 1 and 12.".format(month))
+        month = int(input("Enter month [MM]: "))
+    else:
+        pass
     day = int(input("Enter day [DD]: "))
+    if day <= 0:
+        print("Sorry, {} is not a valid day of the month.".format(day))
+        day = int(input("Enter day [DD]: "))
+    elif day >= 31:
+        print("Sorry, {} is not a valid day of the month.".format(day))
+        day = int(input("Enter day [DD]: "))
+    else:
+        pass
 
     bdate = datetime.date(year, month, day)
 
