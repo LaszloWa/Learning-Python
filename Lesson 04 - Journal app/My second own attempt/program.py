@@ -82,8 +82,6 @@ def delete_entry(data):
                 data.pop(ind)
                 print("Deleting '{}'.".format(items))
                 break
-    elif user_choice_int == 0:
-        pass
     else:
         pass
 
